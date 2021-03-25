@@ -1,6 +1,6 @@
 [user]
-	name = qazwini
-	email = mmqazwini@yahoo.com
+	name = Mahdi Qazwini
+	email = mqazwini@umich.edu
 [core]
 	editor = vim
 [filter "lfs"]
@@ -8,3 +8,8 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[includeIf "gitdir:~/Desktop/schol/"]
+    path = ~/Desktop/schol/.gitconfig
+[init]
+	defaultBranch = master

@@ -20,4 +20,4 @@ autocmd FileType mk,make set noexpandtab
 autocmd FileType markdown,yaml,tex set tabstop=2 | set shiftwidth=2
 
 "Flag trailing whitespace for all files
-match Error /\s\+$/
+"match Error /\s\+$/
