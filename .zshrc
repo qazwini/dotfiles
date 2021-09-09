@@ -17,23 +17,24 @@ precmd() {
 }
 fi
 
-
 #### Variables ###################################################
 
-export d="${HOME}/Desktop"
 export work="${HOME}/Desktop/work"
 export website="${work}/website"
 export udemypy="${HOME}/Developer/udemy/python"
-
+export gg="${HOME}/Developer/grand giveaways/GrandGiveaways.github.io"
+export nafilah="${HOME}/Desktop/nafilah/Nafilah"
 
 #### Aliases #####################################################
 # alias alias_name="command_to_run"
 
+alias cdd="cd ${HOME}/Desktop"
 alias weather='curl "http://wttr.in/canton_michigan?Tn1"'
 alias whatismyip='curl "ipinfo.io/ip"'
 alias py=python
 alias pip=pip3
 alias ctags="`brew --prefix`/bin/ctags"
+alias snake="python ${HOME}/Developer/python/snake.py"
 
 # Open
 alias ubuntu="open ${HOME}/Parallels/Ubuntu.pvm"
@@ -64,14 +65,12 @@ export GIT_EDITOR="$EDITOR"    # Editor used by git commit
 
 #### School ######################################################
 
-alias school="cd ${HOME}/Desktop/schol/2021\ Winter/"
-export EECS280="${HOME}/Desktop/schol/2021 Winter/EECS 280/"
-export EECS201="${HOME}/Desktop/schol/2021 Winter/EECS 201/"
+export school="${HOME}/Desktop/schol/2021\ Fall/"
+export eecs281="${school}/EECS 281/"
+export eecs370="${school}/EECS 370/"
+export stats306="${school}/STATS 306/"
 
-eecsp() {
-    cd "${HOME}/Desktop/schol/2021 Winter/EECS 280/Project $1" 
-}
-
+alias jupyter="${HOME}/opt/anaconda3/bin/jupyter_mac.command; exit;"
 
 #### Other #######################################################
 
@@ -84,6 +83,11 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export LDFLAGS="-L/usr/local/opt/bzip2/lib"
 export CPPFLAGS="-I/usr/local/opt/bzip2/include"
+
+# npm
+#npm set prefix ~/.npm
+#PATH="$HOME/.npm/bin:$PATH"
+#PATH="./node_modules/.bin:$PATH"
 
 # Not sure what this does
 # autoload -Uz compinit promptinit
@@ -121,3 +125,22 @@ export CPPFLAGS="-I/usr/local/opt/bzip2/include"
 # }
 # 
 # prompt_setup signal
+
+
+# Anaconda setup
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/Users/momo/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/Users/momo/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/Users/momo/opt/anaconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/Users/momo/opt/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+# <<< conda initialize <<<
+
