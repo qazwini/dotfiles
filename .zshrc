@@ -1,4 +1,13 @@
 
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
+
+#HISTFILE=~/.histfile
+#HISTSIZE=1000
+#SAVEHIST=2000
+
 #### UI Customization ############################################
 
 # Prompt
@@ -34,7 +43,9 @@ alias whatismyip='curl "ipinfo.io/ip"'
 alias py=python
 alias pip=pip3
 alias ctags="`brew --prefix`/bin/ctags"
+
 alias snake="python ${HOME}/Developer/python/snake.py"
+alias donut="python ${HOME}/Developer/python/donut.py"
 
 # Open
 alias ubuntu="open ${HOME}/Parallels/Ubuntu.pvm"
@@ -59,16 +70,15 @@ export VISUAL="$EDITOR"        # Here for historical reasons
 export SUDO_EDITOR="$EDITOR"   # Editor used by sudoedit and sudo -e
 export GIT_EDITOR="$EDITOR"    # Editor used by git commit
 
-# Vim Keybindings
-#bindkey -v
-
+# Keybindings
+bindkey -v
 
 #### School ######################################################
 
-export school="${HOME}/Desktop/schol/2021\ Fall/"
-export eecs281="${school}/EECS 281/"
-export eecs370="${school}/EECS 370/"
-export stats306="${school}/STATS 306/"
+export school="${HOME}/Desktop/schol/2022 Winter"
+export eecs376="${school}/EECS 376"
+export eecs442="${school}/EECS 442"
+export eecs485="${school}/EECS 485"
 
 alias jupyter="${HOME}/opt/anaconda3/bin/jupyter_mac.command; exit;"
 
@@ -144,3 +154,8 @@ export CPPFLAGS="-I/usr/local/opt/bzip2/include"
 #unset __conda_setup
 # <<< conda initialize <<<
 
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
