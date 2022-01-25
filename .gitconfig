@@ -8,8 +8,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-
-[includeIf "gitdir:~/Desktop/schol/"]
-    path = ~/Desktop/schol/.gitconfig
+#[includeIf "gitdir:~/Desktop/schol/"]
+#    path = ~/Desktop/schol/.gitconfig
 [init]
 	defaultBranch = master

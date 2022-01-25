@@ -8,10 +8,19 @@
 #HISTSIZE=1000
 #SAVEHIST=2000
 
+#neofetch
+
+#~/bin/hadithpe
+
 #### UI Customization ############################################
 
 # Prompt
+PROMPT_SYMBOL="$"
 PS1=$'%{\e[38;5;39m%}%n %1~ $%{\e[0m%} '
+#PS1="%F{#906cff}%n %1~ $%f "
+#PS1="%F{#906cff}%n %1~%f %F{#ff5458}${PROMPT_SYMBOL}%f "
+#PS1=$'%1~ %{\e[38;5;39m%}›%{\e[0m%} '
+#PS1="%F{#F3F3F3}%1~%f %F{#906cff}›%f "
 
 # Highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -40,8 +49,7 @@ export nafilah="${HOME}/Desktop/nafilah/Nafilah"
 alias cdd="cd ${HOME}/Desktop"
 alias weather='curl "http://wttr.in/canton_michigan?Tn1"'
 alias whatismyip='curl "ipinfo.io/ip"'
-alias py=python
-alias pip=pip3
+#alias pip=pip3
 alias ctags="`brew --prefix`/bin/ctags"
 
 alias snake="python ${HOME}/Developer/python/snake.py"
@@ -62,6 +70,7 @@ if test -d /Applications/Firefox.app; then
   alias firefox-new-window='open -a Firefox -n --args --new-window'
 fi
 
+alias leetcode="$EDITOR ${HOME}/Developer/alg.md"
 
 #### Editor ######################################################
 
@@ -72,13 +81,15 @@ export GIT_EDITOR="$EDITOR"    # Editor used by git commit
 
 # Keybindings
 bindkey -v
+bindkey "^[[3~" delete-char
 
 #### School ######################################################
 
-export school="${HOME}/Desktop/schol/2022 Winter"
-export eecs376="${school}/EECS 376"
-export eecs442="${school}/EECS 442"
-export eecs485="${school}/EECS 485"
+export research="${HOME}/Desktop/schol/research"
+export school="${HOME}/Desktop/schol/winter2022"
+export eecs376="${school}/eecs376"
+export eecs442="${school}/eecs442"
+export eecs485="${school}/eecs485"
 
 alias jupyter="${HOME}/opt/anaconda3/bin/jupyter_mac.command; exit;"
 
@@ -93,6 +104,9 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export LDFLAGS="-L/usr/local/opt/bzip2/lib"
 export CPPFLAGS="-I/usr/local/opt/bzip2/include"
+
+# Java
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 # npm
 #npm set prefix ~/.npm
